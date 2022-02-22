@@ -2,21 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blog Title Here</title>
+    <title>Site Title Here</title>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-
-    <p>{{posts}}</p>
-
+    <header>Place Header Here</header>
     {% for post in posts %}
-        <article>
-            <time>{{post.published_date}}</time>
-            <h2><a href="">{{post.title}}</a></h2>
-            <p>{{post.text|linebreaksbr}}</p>
-        </article>
+    <article class="post">
+        <h2><a href="">{{post.title}}</a></h2>
+        <p>Author: <a href="">{{post.author}}</a></p>
+        <time>Published: {{post.published_date}}</time>
+        <p>{{post.text|linebreaksbr}}</p>
+    </article>
     {% endfor %}
+    <footer>Place Footer Here</footer>
 </body>
 </html>
