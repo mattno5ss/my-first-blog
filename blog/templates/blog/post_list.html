@@ -1,13 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Site Title Here</title>
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-</head>
-<body>
-    <header>Place Header Here</header>
+{% extends 'blog/base.html' %}
+
+{% block content %}
     {% for post in posts %}
     <article class="post">
         <h2><a href="">{{post.title}}</a></h2>
@@ -16,6 +9,4 @@
         <p>{{post.text|linebreaksbr}}</p>
     </article>
     {% endfor %}
-    <footer>Place Footer Here</footer>
-</body>
-</html>
+{% endblock %}
