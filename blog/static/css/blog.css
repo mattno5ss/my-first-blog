@@ -22,11 +22,14 @@ header, footer {
     color: gray;
     border: 1px solid gray;
     border-radius: 3px;
-    margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
 }
 
-form {
-    margin-bottom: 50x;
+form, .new-post-button {
+    margin-bottom: 5px;
+}
+
+.post-info, .edit-button {
+    display: flex;
 }
