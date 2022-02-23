@@ -6,6 +6,14 @@ a {
     text-decoration: none;
 }
 
+a:link, a:visited {
+    color: darkslateblue;
+}
+
+a:hover {
+    color: slateblue;
+}
+
 header, footer {
     background-color: lightgray;
 }
@@ -13,6 +21,12 @@ header, footer {
 .post, header, footer {
     color: gray;
     border: 1px solid gray;
+    border-radius: 3px;
+    margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
+}
+
+form {
+    margin-bottom: 50x;
 }
